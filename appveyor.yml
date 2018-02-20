@@ -16,11 +16,6 @@ before_build:
     secure-file\tools\secure-file -decrypt %APPVEYOR_PROJECT_NAME%\ACMESharp.Providers.OVH-test\Config\OvhHandlerParams.json.enc -secret %secure_file_secret%
 build:
   verbosity: minimal
-artifacts:
-- path: ACMESharp.Providers.OVH\ACMESharp.Providers.OVH\bin\Release
-  name: '*.nupkg'
-- path: ACMESharp.Providers.OVH\ACMESharp.Providers.OVH\bin\Release\net451
-  name: '*.psd1'
 deploy:
 - provider: NuGet
   api_key:
