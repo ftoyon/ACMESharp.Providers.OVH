@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2026
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMESharp.Providers.OVH", "ACMESharp.Providers.OVH\ACMESharp.Providers.OVH.csproj", "{87968263-71B7-4725-90D3-3EED21A9BE14}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ACMESharp.Providers.OVH-test", "ACMESharp.Providers.OVH-test\ACMESharp.Providers.OVH-test.csproj", "{4675E4BE-CC36-4A37-A6F0-9C773935FB1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "external", "external", "{9A7CB26B-8364-4F2F-BBCF-54EA40000F39}"
+	ProjectSection(SolutionItems) = preProject
+		..\README.md = ..\README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{87968263-71B7-4725-90D3-3EED21A9BE14}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{87968263-71B7-4725-90D3-3EED21A9BE14}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{87968263-71B7-4725-90D3-3EED21A9BE14}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{87968263-71B7-4725-90D3-3EED21A9BE14}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4675E4BE-CC36-4A37-A6F0-9C773935FB1B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4675E4BE-CC36-4A37-A6F0-9C773935FB1B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4675E4BE-CC36-4A37-A6F0-9C773935FB1B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4675E4BE-CC36-4A37-A6F0-9C773935FB1B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {33E0AB8B-FF98-4B12-AB88-A9AC6204884D}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net451</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Copyright>Copyright © Frédéric Toyon / Eugene Bekker 2018</Copyright>
+    <Authors>Frédéric Toyon / Eugene Bekker</Authors>
+    <Version>0.9.1.326</Version>
+    <RepositoryUrl>https://github.com/ftoyon/ACMESharp.Providers.OVH</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <Description>An ACMESharp provider for OVH DNS.</Description>
+    <PackageIconUrl>https://cdn.rawgit.com/ebekker/ACMESharp/49bf6524da8239ecf258ab3857dfbbf40366ecfd/artwork/ACMESharp-logo-square64.png</PackageIconUrl>
+    <PackageProjectUrl>https://github.com/ftoyon/ACMESharp.Providers.OVH</PackageProjectUrl>
+    <PackageLicenseUrl>https://raw.githubusercontent.com/ftoyon/ACMESharp.Providers.OVH/master/LICENSE</PackageLicenseUrl>
+    <PackageTags>pki ssl tls security certificates letsencrypt acme acmesharp OVH</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="ACMESharp" Version="0.9.1.326" />
+    <PackageReference Include="csharp-ovh" Version="1.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="System.ComponentModel.Composition" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ACMESharp.Providers.OVH.psd1">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+</Project>
