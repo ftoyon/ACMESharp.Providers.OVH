@@ -1,0 +1,30 @@
+version: 0.9.1.{build}
+skip_tags: true
+image: Visual Studio 2017
+configuration: Release
+environment:
+  secure_file_secret:
+    secure: 5wJKdG7qso5CnXWf/iLU+Q==
+before_build:
+- cmd: >-
+    msbuild /t:restore /p:Configuration=%configuration% %APPVEYOR_BUILD_FOLDER%\%APPVEYOR_PROJECT_NAME%\%APPVEYOR_PROJECT_NAME%.sln
+
+    nuget restore %APPVEYOR_BUILD_FOLDER%\%APPVEYOR_PROJECT_NAME%\%APPVEYOR_PROJECT_NAME%.sln
+
+    nuget install secure-file -ExcludeVersion
+
+    secure-file\tools\secure-file -decrypt %APPVEYOR_PROJECT_NAME%\ACMESharp.Providers.OVH-test\Config\OvhHandlerParams.json.enc -secret %secure_file_secret%
+build:
+  verbosity: minimal
+artifacts:
+- path: ACMESharp.Providers.OVH\ACMESharp.Providers.OVH\bin\Release
+  name: '*.nupkg'
+- path: ACMESharp.Providers.OVH\ACMESharp.Providers.OVH\bin\Release\net451
+  name: '*.psd1'
+deploy:
+- provider: NuGet
+  api_key:
+    secure: pue343bs7KQq6vcputSO8IB3qtSRhi3BNHteeC7kdU6C+fKSov5cT9tAGOY0rRAK
+  skip_symbols: true
+  on:
+    branch: master

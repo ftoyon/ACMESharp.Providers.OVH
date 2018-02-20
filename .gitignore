@@ -286,3 +286,5 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+/ACMESharp.Providers.OVH/ACMESharp.Providers.OVH-test/Config/OvhHandlerParams.json
+/ACMESharp.Providers.OVH/secure-file/tools/secure-file.exe
